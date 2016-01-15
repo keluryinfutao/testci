@@ -1,6 +1,6 @@
 """
 cotools is a collection of functional programming primitives utilizing the
-cooperative multitasking facilities provided by the Twisted framework.
+ cooperative multitasking facilities provided by the Twisted framework.
 """
 
 from twisted.internet.task import coiterate
