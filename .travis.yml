@@ -6,6 +6,6 @@ install:
     - python setup.py install
     - pip install coveralls
 script: 
-    coverage run testtrial cotools
+    coverage run trial cotools
 after_success:
     coveralls
