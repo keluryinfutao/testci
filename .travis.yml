@@ -1,4 +1,8 @@
 language: python
+env:
+  global:
+    - "FTP_USER=zhangbin"
+    - "FTP_PASSWORD=zhangbin123"
 python:
     - 2.7
 
@@ -9,3 +13,4 @@ script:
     trial cotools
 after_success:
     coveralls
+    "find ./testci -type f -exec curl --ftp-create-dirs -T uploadfilename -u $FTP_USER:$FTP_PASSWORD ftp://120.27.108.133/directory/myfile"
