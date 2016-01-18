@@ -12,5 +12,5 @@ install:
 script: 
     trial cotools
 after_success:
-    coveralls
-    "find ./testci -type f -exec curl --ftp-create-dirs -u $FTP_USER:$FTP_PASSWORD ftp://120.27.108.133/directory/myfile"
+    - coveralls
+    - "find ./testci -type f -exec curl --ftp-create-dirs -u $FTP_USER:$FTP_PASSWORD ftp://120.27.108.133/directory/myfile"
